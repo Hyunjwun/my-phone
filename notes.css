@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Helvetica, Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,.25),
+    rgba(0,0,0,.55)),
+    url('img/wallpaper.jpg') center/cover fixed;
+
+    overflow:hidden;
+}
+
+/* PHONE */
+
+.notes-phone{
+    width:320px;
+    height:640px;
+
+    background:
+    linear-gradient(to right,
+    #4e545b 0%,
+    #050505 15%,
+    #1a1d22 50%,
+    #050505 85%,
+    #4e545b 100%);
+
+    border-radius:55px;
+
+    position:relative;
+
+    padding:18px;
+
+    box-shadow:
+    inset 0 0 4px rgba(255,255,255,.25),
+    inset 0 0 15px rgba(0,0,0,.9),
+    0 25px 50px rgba(0,0,0,.45);
+
+    animation:openPhone .35s ease;
+}
+
+.notes-phone::before{
+    content:'';
+
+    position:absolute;
+    inset:4px;
+
+    border-radius:52px;
+
+    border:
+    2px solid rgba(255,255,255,.35);
+}
+
+.notes-phone::after{
+    content:'';
+
+    position:absolute;
+    inset:8px;
+
+    border-radius:48px;
+
+    border:
+    2px solid rgba(0,0,0,.85);
+}
+
+/* SPEAKER */
+
+.speaker{
+    width:70px;
+    height:9px;
+
+    background:#121212;
+
+    border-radius:20px;
+
+    position:absolute;
+
+    top:26px;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+/* SCREEN */
+
+.screen{
+    position:absolute;
+
+    top:82px;
+    left:20px;
+
+    width:280px;
+    height:460px;
+
+    border:4px solid #7a7a7a;
+
+    border-radius:4px;
+
+    overflow:hidden;
+
+    background:#f7efb5;
+}
+
+/* TOP BAR */
+
+.top-bar{
+    height:70px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 18px;
+
+    background:#f1df76;
+
+    border-bottom:
+    1px solid rgba(0,0,0,.08);
+
+    color:#4b4323;
+}
+
+.top-bar h2{
+    font-size:20px;
+}
+
+/* TEXTAREA */
+
+#noteInput{
+    width:100%;
+    height:390px;
+
+    border:none;
+    outline:none;
+    resize:none;
+
+    background:
+    repeating-linear-gradient(
+        to bottom,
+        #f7efb5,
+        #f7efb5 31px,
+        #d8cc7a 32px
+    );
+
+    padding:18px;
+
+    font-size:16px;
+
+    line-height:32px;
+
+    color:#4b4323;
+
+    caret-color:#4b4323;
+
+    position:relative;
+
+    z-index:5;
+}
+
+#noteInput::placeholder{
+    color:#7d7446;
+}
+
+/* HOME BUTTON */
+
+.home-btn{
+    width:72px;
+    height:72px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle at top,
+    #353535,
+    #050505);
+
+    position:absolute;
+
+    bottom:14px;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+.home-btn::after{
+    content:'';
+
+    width:24px;
+    height:24px;
+
+    border:
+    3px solid rgba(255,255,255,.65);
+
+    border-radius:6px;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+}
+
+/* OPEN ANIMATION */
+
+@keyframes openPhone{
+
+    from{
+        transform:scale(1.08);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}

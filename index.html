@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY PHONE</title>
+  <link rel="icon" type="image/png" href="phone.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- IPHONE -->
+<div class="iphone">
+
+    <div class="speaker"></div>
+
+    <!-- LOCKSCREEN -->
+    <div id="lockscreen">
+
+        <div class="lock-time" id="time">9:41</div>
+        <div class="lock-date" id="date">Wednesday</div>
+
+        <div class="unlock-container">
+            <div id="unlockSlider">
+                <span>slide to unlock</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- HOME SCREEN -->
+    <div id="homescreen">
+
+        <div class="status-bar">
+            <span>AT&T</span>
+            <span id="statusTime">9:41</span>
+            <span>100%</span>
+        </div>
+
+        <div class="apps">
+
+            <div class="app" onclick="openApp('gallery.html')">
+                <img src="galeri.jpg">
+                <p>Gallery</p>
+            </div>
+
+            <div class="app" onclick="openApp('https:/benplaylist.vercel.app/')">
+                <img src="music.webp">
+                <p>Music</p>
+            </div>
+
+            <div class="app" onclick="openApp('notes.html')">
+                <img src="notes.webp">
+                <p>Notes</p>
+            </div>
+
+        </div>
+
+        <div class="dock">
+            <img src="safari.webp">
+            <img src="setting.jpg">
+        </div>
+
+    </div>
+
+    <div class="home-btn"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
